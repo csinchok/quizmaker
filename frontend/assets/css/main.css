@@ -1,4 +1,42 @@
+#quiz {
+  padding: 0;
+  max-width: 600px;
+  font-size: 1em;
+}
+#quiz > li {
+  display: none;
+}
+#quiz > li:first-child {
+  display: block;
+}
+#quiz dl {
+  overflow: hidden;
+}
+#quiz dl dt {
+  margin: 0 10px;
+}
+#quiz dl dd {
+  margin: 0;
+  padding: 0;
+}
 #quiz .answer {
   display: inline;
   float: left;
+  font-size: 80%;
+  width: 50%;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+#quiz .answer img {
+  opacity: 0.75;
+  width: 100%;
+}
+#quiz .answer:hover img {
+  opacity: 1;
+}
+#quiz .answer figure {
+  margin: 0 10px 5px 10px;
+}
+#quiz .answer figure + span {
+  margin: 0 10px 10px 10px;
 }

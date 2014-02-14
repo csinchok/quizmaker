@@ -1,5 +1,21 @@
-#quiz {
-	
-	.answer { display: inline; float: left; }
+#quiz { padding: 0; max-width: 600px; font-size: 1em;
 
-}
+	> li { display: none; 
+
+		&:first-child { display: block; } }
+
+	dl { overflow: hidden; 
+
+		dt { margin: 0 10px; }
+
+		dd { margin: 0; padding: 0; } }
+	
+	.answer { display: inline; float: left; font-size: 80%; width: 50%; margin: 0 0 20px 0; cursor: pointer;
+
+		img { opacity: 0.75; width: 100%;}
+
+		&:hover img { opacity: 1; }
+
+		figure { margin: 0 10px 5px 10px; 
+
+			+ span { margin: 0 10px 10px 10px; } } } }

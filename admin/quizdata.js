@@ -1,7 +1,7 @@
 // QuizMaker
 
 function QuizMaker() {
-    this.questions = [];
+    this.questions = []; // questions are ordered
     this.results = {};
 }
 

@@ -11,6 +11,7 @@ Quiz.prototype.restart = function() {
 }
 
 Quiz.prototype.giveAnswer = function(questionId, answerId) {
+    // accumulate the potential results of this answer
     var question = this.data.questions[questionId];
     var answer = question.answers[answerId];
     this.userAnswerResults[questionId] = answer.results;

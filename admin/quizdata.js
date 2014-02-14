@@ -100,7 +100,7 @@ qm.addAnswer(qid, "Theft and murder is the only answer", ["murderer"]);
 
 qid = qm.addQuestion("How many murders have you committed?", "someimage.jpg");
 qm.addAnswer(qid, "Enough.", ["murderer"]);
-qm.addAnswer(qid, "What's a murder?", ["murderer"]);
+qm.addAnswer(qid, "What's a murder?", ["murderer", "normal"]);
 qm.addAnswer(qid, "Murder is not ok.", ["normal"]);
 
 var qt = new QuizTaker(qm.getData());

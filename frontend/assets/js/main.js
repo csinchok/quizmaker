@@ -38,8 +38,6 @@ a.each(function(index){
 			p = 		$this.parents('.question'), // parent question
 			a = 		p.find('.answer'), // other answers
 			nQ = 		p.next('.question');
-		
-		console.log($this); // log answer in console
 
 		if ( nQ.length ){
 			p.hide();

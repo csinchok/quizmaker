@@ -1,4 +1,19 @@
-#quiz { padding: 0; max-width: 600px; font-size: 1em;
+.serif-bold() {
+	font-family: Georgia, serif;
+	font-weight: bold;
+
+	@font-face {
+	  font-family: 'MetaSerifWeb-Bold';
+	  src: url("http://www.theonion.com/static/onion/fonts/MetaSerifWeb-Bold.woff") format("woff");
+	}
+
+	@media only screen and (min-width: 650px) {
+		font-family: 'MetaSerifWeb-Bold', Georgia, serif;
+		font-weight: normal; 
+	}
+}
+
+#quiz { padding: 0; max-width: 600px; font-size: 1em; font-family: Helvetica,Arial,sans-serif;
 
 	> li { display: none; 
 
@@ -6,15 +21,23 @@
 
 	dl { overflow: hidden; 
 
-		dt { margin: 0 10px; }
+		dt { margin: 0 10px;.serif-bold();
+
+			figure { margin: 0; width: 100%; text-align: center; margin: 0 0 10px 0; }
+
+			h3 { margin: 0 0 10px !important; } }
 
 		dd { margin: 0; padding: 0; } }
 	
-	.answer { display: inline; float: left; font-size: 80%; width: 50%; margin: 0 0 20px 0; cursor: pointer;
+	.answer { display: inline; float: left; font-size: 90%; width: 50%; padding: 5px 0; cursor: pointer;
 
-		img { opacity: 0.75; width: 100%;}
+		&:hover span { text-decoration: underline; } 
 
-		&:hover img { opacity: 1; }
+		figure img { opacity: 0.75; width: 100%;}
+
+		span { margin: 0 10px; }
+
+		&:hover figure img { opacity: 1; }
 
 		figure { margin: 0 10px 5px 10px; 
 

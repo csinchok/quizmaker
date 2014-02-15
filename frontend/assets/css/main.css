@@ -2,6 +2,7 @@
   padding: 0;
   max-width: 600px;
   font-size: 1em;
+  font-family: Helvetica, Arial, sans-serif;
 }
 #quiz > li {
   display: none;
@@ -14,6 +15,27 @@
 }
 #quiz dl dt {
   margin: 0 10px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MetaSerifWeb-Bold';
+  src: url("http://www.theonion.com/static/onion/fonts/MetaSerifWeb-Bold.woff") format("woff");
+}
+@media only screen and (min-width: 650px) {
+  #quiz dl dt {
+    font-family: 'MetaSerifWeb-Bold', Georgia, serif;
+    font-weight: normal;
+  }
+}
+#quiz dl dt figure {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#quiz dl dt h3 {
+  margin: 0 0 10px !important;
 }
 #quiz dl dd {
   margin: 0;
@@ -22,16 +44,22 @@
 #quiz .answer {
   display: inline;
   float: left;
-  font-size: 80%;
+  font-size: 90%;
   width: 50%;
-  margin: 0 0 20px 0;
+  padding: 5px 0;
   cursor: pointer;
 }
-#quiz .answer img {
+#quiz .answer:hover span {
+  text-decoration: underline;
+}
+#quiz .answer figure img {
   opacity: 0.75;
   width: 100%;
 }
-#quiz .answer:hover img {
+#quiz .answer span {
+  margin: 0 10px;
+}
+#quiz .answer:hover figure img {
   opacity: 1;
 }
 #quiz .answer figure {

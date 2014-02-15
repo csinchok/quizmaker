@@ -3,6 +3,9 @@
   max-width: 600px;
   font-size: 1em;
   font-family: Helvetica, Arial, sans-serif;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
 }
 #quiz > li {
   display: none;
@@ -43,6 +46,15 @@
 #quiz dl dd {
   margin: 0;
   padding: 0;
+}
+#quiz .desc p,
+#quiz .answer p,
+#quiz .desc span,
+#quiz .answer span {
+  margin: 10px;
+}
+#quiz .question {
+  text-align: left;
 }
 #quiz .answer {
   display: inline;

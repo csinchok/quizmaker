@@ -1,23 +1,16 @@
-.serif-bold() {
-	font-family: Georgia, serif;
-	font-weight: bold;
+.serif-bold() { font-family: Georgia, serif; font-weight: bold;
 
-	@font-face {
-	  font-family: 'MetaSerifWeb-Bold';
-	  src: url("http://www.theonion.com/static/onion/fonts/MetaSerifWeb-Bold.woff") format("woff");
-	}
+	@font-face { font-family: 'MetaSerifWeb-Bold'; src: url("http://www.theonion.com/static/onion/fonts/MetaSerifWeb-Bold.woff") format("woff"); }
 
-	@media only screen and (min-width: 650px) {
-		font-family: 'MetaSerifWeb-Bold', Georgia, serif;
-		font-weight: normal; 
-	}
-}
+	@media only screen and (min-width: 650px) { font-family: 'MetaSerifWeb-Bold', Georgia, serif; font-weight: normal; } }
 
 #quiz { padding: 0; max-width: 600px; font-size: 1em; font-family: Helvetica,Arial,sans-serif;
 
 	> li { display: none; 
 
-		&:first-child { display: block; } }
+		&.goBack { display: block; position: absolute; 
+
+			+ li { display: block; } } }
 
 	dl { overflow: hidden; 
 

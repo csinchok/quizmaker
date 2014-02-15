@@ -7,7 +7,11 @@
 #quiz > li {
   display: none;
 }
-#quiz > li:first-child {
+#quiz > li.goBack {
+  display: block;
+  position: absolute;
+}
+#quiz > li.goBack + li {
   display: block;
 }
 #quiz dl {

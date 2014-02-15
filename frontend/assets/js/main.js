@@ -4,6 +4,7 @@ var quiz = 	$('#quiz'),
 	gB = 	quiz.find('.goBack a'); // go back
 
 // Go back button
+/*
 gB.each(function(index){
 	$(this).click( function(e){
 
@@ -22,6 +23,7 @@ gB.each(function(index){
 		}
 	});
 });
+*/
 
 // On answer click
 a.each(function(index){

@@ -1,6 +1,6 @@
 var quiz = 	$('#quiz'),
-	q = 	quiz.find('li:not(.goBack)'), // questions
-	a = 	q.find('dd'), // answers
+	q = 	quiz.find('.question'), // questions
+	a = 	q.find('.answer'), // answers
 	gB = 	quiz.find('.goBack a'); // go back
 
 // Go back button
@@ -8,11 +8,18 @@ gB.each(function(index){
 	$(this).click( function(e){
 
 		var $this = 	$(this),
-			p = 		$(this).parent(); // goBack parent question
+			p = 		$(this).parents('.question'), // goBack parent question
+			lQ = 		p.prev('.question');
 
 		e.preventDefault();
-		console.log('you clicked \'go back\'');
+		console.log(lQ);
 
+		if ( lQ.length ){
+			p.hide();
+			lQ.show();
+		} else {
+			console.log('you clicked \'go back\'');
+		}
 	});
 });
 
@@ -21,15 +28,23 @@ a.each(function(index){
 	$(this).click( function(){
 
 		var $this = 	$(this),
-			p = 		$this.parents('li'), // parent question
-			a = 		p.find('dd'); // other answers
+			p = 		$this.parents('.question'), // parent question
+			a = 		p.find('.answer'), // other answers
+			nQ = 		p.next('.question');
 		
 		console.log($this); // log answer in console
 
-		if ( p.next("li").length ){
-			p.hide().next('li').show(); // hide question and show next
+		if ( nQ.length ){
+			p.hide();
+			nQ.show(); // hide question and show next
+
+			// Collect and save each result here
+
 		} else {
-			console.log("that was the last question") // indicate if last question
+			p.hide();
+			$('#result').show();
+
+			// Fill the result here.
 		}
 
 	});

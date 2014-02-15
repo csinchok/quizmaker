@@ -7,11 +7,10 @@
 #quiz > li {
   display: none;
 }
-#quiz > li.goBack {
-  display: block;
-  position: absolute;
+#quiz > li.question {
+  display: hidden;
 }
-#quiz > li.goBack + li {
+#quiz > li.question:first-child {
   display: block;
 }
 #quiz dl {

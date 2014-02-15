@@ -29,14 +29,14 @@
 		p, span { margin: 10px; } }
 
 	.question { text-align: left; }
-	
-	.answer { display: inline; float: left; font-size: 90%; width: 50%; padding: 5px 0; cursor: pointer;
+
+	.answer { font-size: 90%; cursor: pointer; padding: 10px 0 15px; 
 
 		&:hover span { text-decoration: underline; } 
 
 		figure img { opacity: 0.75; width: 100%;}
 
-		span { margin: 0 10px; }
+		span { margin: 0 10px; display: block; }
 
 		&:hover figure img { opacity: 1; }
 
@@ -51,3 +51,7 @@
 			a { color: #555; text-decoration: none; 
 
 				&:hover { text-decoration: underline; } } } } }
+
+@media (min-width: 500px) { // Medium size
+
+	#quiz .answer { display: inline; float: left; width: 50%; padding: 5px 0; } }

@@ -62,12 +62,9 @@
   text-align: left;
 }
 #quiz .answer {
-  display: inline;
-  float: left;
   font-size: 90%;
-  width: 50%;
-  padding: 5px 0;
   cursor: pointer;
+  padding: 10px 0 15px;
 }
 #quiz .answer:hover span {
   text-decoration: underline;
@@ -78,6 +75,7 @@
 }
 #quiz .answer span {
   margin: 0 10px;
+  display: block;
 }
 #quiz .answer:hover figure img {
   opacity: 1;
@@ -103,4 +101,12 @@
 }
 #quiz #share li a:hover {
   text-decoration: underline;
+}
+@media (min-width: 500px) {
+  #quiz .answer {
+    display: inline;
+    float: left;
+    width: 50%;
+    padding: 5px 0;
+  }
 }

@@ -3,9 +3,7 @@ var quiz = 	$('#quiz'),
 	a = 	q.find('.answer'), // answers
 	gB = 	quiz.find('.goBack a'); // go back
 
-// Go back button
-/*
-gB.each(function(index){
+/* gB.each(function(index){ // Go back button -- I don't think we need this -scook
 	$(this).click( function(e){
 
 		var $this = 	$(this),
@@ -22,8 +20,15 @@ gB.each(function(index){
 			console.log('you clicked \'go back\'');
 		}
 	});
-});
-*/
+}); */
+
+function sR() { // Save result
+
+}
+
+function fR() { // Fill result
+
+}
 
 // On answer click
 a.each(function(index){
@@ -39,15 +44,12 @@ a.each(function(index){
 		if ( nQ.length ){
 			p.hide();
 			nQ.show(); // hide question and show next
-
-			// Collect and save each result here
+			sR();
 
 		} else {
 			p.hide();
 			$('#result').show();
-
-			// Fill the result here.
+			fR();
 		}
-
 	});
 });

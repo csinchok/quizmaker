@@ -4,6 +4,8 @@
 
 	@media only screen and (min-width: 650px) { font-family: 'MetaSerifWeb-Bold', Georgia, serif; font-weight: normal; } }
 
+.unstyled { list-style: none; margin: 0; padding: 0; }
+
 #quiz { padding: 0; max-width: 600px; font-size: 1em; font-family: Helvetica,Arial,sans-serif; list-style: none; overflow: hidden; text-align: center;
 
 	> li { display: none; 
@@ -40,6 +42,12 @@
 
 		figure { margin: 0 10px 5px 10px; 
 
-			+ span { margin: 0 10px 10px 10px; } }  }
+			+ span { margin: 0 10px 10px 10px; } } }
 
-	#result { } }
+	#share { overflow: auto; text-align: center;
+
+		li { display: inline; width: auto; font-size: 70%; 
+
+			a { color: #555; text-decoration: none; 
+
+				&:hover { text-decoration: underline; } } } } }

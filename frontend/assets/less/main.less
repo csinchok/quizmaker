@@ -4,6 +4,16 @@
 
 	@media only screen and (min-width: 650px) { font-family: 'MetaSerifWeb-Bold', Georgia, serif; font-weight: normal; } }
 
+button::-moz-focus-inner { border: 0 }
+
+/* minimal
+*******************************************************************************/
+.answer { border-top: 1px solid #efefef; -moz-box-shadow: rgba(0,0,0,1) 0 1px 0; -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; background: #ededed; background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#ededed)); background: -webkit-linear-gradient(top, #f7f7f7, #ededed); background: -moz-linear-gradient(top, #f7f7f7, #ededed); background: -ms-linear-gradient(top, #f7f7f7, #ededed); background: -o-linear-gradient(top, #f7f7f7, #ededed); box-shadow: rgba(0,0,0,1) 0 1px 0; color: #383838; font-family: Helvetica, Arial, Sans-Serif; font-size: 13px; padding: 9.5px 19px; text-decoration: none; vertical-align: middle; }
+
+.answer:active { background: #d4d4d4; }
+
+.answer:hover { background: #fafafa; color: #000000; }
+
 .unstyled { list-style: none; margin: 0; padding: 0; }
 
 #quiz { padding: 0; max-width: 600px; font-size: 1em; font-family: Helvetica,Arial,sans-serif; list-style: none; overflow: hidden; text-align: center;
@@ -54,4 +64,4 @@
 
 @media (min-width: 500px) { // Medium size
 
-	#quiz .answer { display: inline; float: left; width: 50%; padding: 5px 0; } }
+	#quiz .answer { padding: 15px 0; } }
